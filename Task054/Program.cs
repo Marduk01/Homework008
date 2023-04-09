@@ -9,8 +9,11 @@
 // 9 5 3 2
 // 8 4 4 2
 
-int rows = EntireNumbers("Введите количество строк : ");
-int columns = EntireNumbers("Введите количество столбцов : ");
+Console.Write("Введите количество строк : ");
+int rows = Convert.ToInt32(Console.ReadLine());
+Console.Write("Введите количество столбцов : ");
+int columns = Convert.ToInt32(Console.ReadLine());
+
 int[,] numbers = new int[rows, columns];
 
 FillArrayRandomNumbers(numbers);
@@ -61,8 +64,3 @@ void ModifiedArray (int[,] numbers)
     }
 }
 
-int EntireNumbers(string msg)
-{
-    Console.WriteLine(msg);
-    return Convert.ToInt32(Console.ReadLine());
-}
