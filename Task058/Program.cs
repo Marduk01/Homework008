@@ -24,7 +24,7 @@ FillArrayRandom(secondArray);
 PrintArray(secondArray);
 Console.WriteLine();
 
-if(firstArray.GetLength(0) != secondArray.GetLength(1))
+if (firstArray.GetLength(0) != secondArray.GetLength(1))
 {
     Console.WriteLine("Нельзя умножить ");
     return;
@@ -32,21 +32,21 @@ if(firstArray.GetLength(0) != secondArray.GetLength(1))
 
 void FillArrayRandom(int[,] firstArray)
 {
-    for(int i = 0; i < firstArray.GetLength(0); i++)
+    for (int i = 0; i < firstArray.GetLength(0); i++)
     {
-        for(int j = 0; j < firstArray.GetLength(1); j++)
+        for (int j = 0; j < firstArray.GetLength(1); j++)
         {
-            firstArray[i, j] = new Random().Next(1,10);
+            firstArray[i, j] = new Random().Next(1, 10);
         }
     }
 }
 
-for(int i = 0; i < firstArray.GetLength(0); i++)
+for (int i = 0; i < firstArray.GetLength(0); i++)
 {
-    for(int j = 0; j < secondArray.GetLength(1); j++)
+    for (int j = 0; j < secondArray.GetLength(1); j++)
     {
         multiArray[i, j] = 0;
-        for(int k= 0; k < firstArray.GetLength(1); k++)
+        for (int k = 0; k < firstArray.GetLength(1); k++)
         {
             multiArray[i, j] += firstArray[i, k] * secondArray[k, j];
         }
@@ -63,9 +63,9 @@ int ReadInt(string msg)
 
 void PrintArray(int[,] firstArray)
 {
-    for(int i = 0; i < firstArray.GetLength(0); i++)
+    for (int i = 0; i < firstArray.GetLength(0); i++)
     {
-        for(int j = 0; j < firstArray.GetLength(1); j++)
+        for (int j = 0; j < firstArray.GetLength(1); j++)
         {
             Console.Write($"{firstArray[i, j]}");
         }
