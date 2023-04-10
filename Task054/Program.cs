@@ -9,10 +9,8 @@
 // 9 5 3 2
 // 8 4 4 2
 
-Console.Write("Введите количество строк : ");
-int rows = Convert.ToInt32(Console.ReadLine());
-Console.Write("Введите количество столбцов : ");
-int columns = Convert.ToInt32(Console.ReadLine());
+int rows = ReadInt("Введите количество строк : ");
+int columns = ReadInt("Введите количество столбцов : ");
 
 int[,] numbers = new int[rows, columns];
 
@@ -64,3 +62,8 @@ void ModifiedArray (int[,] numbers)
     }
 }
 
+int ReadInt(string msg)
+{
+    Console.Write(msg);
+    return Convert.ToInt32(Console.ReadLine());
+}
